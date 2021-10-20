@@ -18,4 +18,4 @@ To contribute to this project, please create a fork of the main branch and make 
 
 <a href="https://github.com/fida6941" target="_blank">**Fida Kamal**</a><br />\
 <a href="https://github.com/nhn09" target="_blank">**Fariha Fairoz**</a><br />\
-<a href="https://github.com/chocolatekhan" target="_blank">**Alvi Aveen Khan**</a>
+<a href="https://github.com/alvi-khan" target="_blank">**Alvi Aveen Khan**</a>
