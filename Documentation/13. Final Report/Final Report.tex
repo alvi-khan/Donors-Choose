@@ -1,0 +1,620 @@
+\documentclass{scrreprt}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage{fancyhdr}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{glossaries}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{flafter}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{float}
+\setcounter{secnumdepth}{3}
+\hyphenpenalty=10000
+\date{}
+
+\usepackage{hyperref}
+\addto\captionsenglish{
+  \renewcommand{\contentsname}
+    {Table of Contents}
+}
+
+\begin{document}
+
+\tableofcontents
+
+\chapter{Introduction}
+
+    Donors Choose is a medium between potential donors and charities.\par
+    
+    Potential donors will be able to search for charities and even for different categories of donations upon which they will be shown a range of choices. On the page for a specific charity, they will be able to see a general overview of the charity, as well as the different activities currently underway. They will have the option to provide details to the charity for collection of non-monetary donations or provide monetary donations directly through their bank accounts.\par
+    
+    Charity organizations will be able to inform potential donors about the activities they are partaking in, collect information about donors who are willing to make non-monetary donations and inform past donors about the outcomes of their donations. The charities will have to contact support staff and verify that they are a legitimate non-profit organization, upon which they will be given an account on the system.
+
+
+\chapter{Problem Statement, Opportunities and Objectives}
+
+    \section{Problem Statement}
+        
+        The current system of donations relies heavily on monetary donations. However, this is not feasible for a lot of people and fails to recognize the benefits of an organized approach to providing a platform for non-monetary donations. This results in most non-monetary donations being circulated in the donor's immediate surroundings only, depriving people who may need them more.\par
+        
+        Additionally, having no common, trustworthy platform for charities results in people feeling overwhelmed with the huge number of different charities and the wide variety of their work. It can be difficult to navigate through the different donation processes while also attempting to verify reliability by themselves.
+        
+    \section{Opportunities}
+    
+    With the help of Donors Choose, donors will be able to:
+    
+        \begin{enumerate}
+            \item Search for information regarding charities
+            \item Stay up-to-date about their favorite charities
+            \item Make both monetary and non-monetary donations to their desired charities
+            \item Receive updates about previous donations
+            \item Leave reviews for charities they have donated to
+        \end{enumerate}
+
+    Charities will be able to:
+        
+        \begin{enumerate}
+            \item Inform people about their organization and their activities
+            \item Highlight activities on the homepage of any donors interested in the organization
+            \item Update past donors about the status of their donations
+            \item Collect information about donations
+        \end{enumerate}
+    
+    \section{Objectives}
+        
+        \begin{enumerate}
+            
+            \item Services from charities like collection of second-hand clothes or left-over food will be organized into different categories.
+            
+            \item There will be notifications and banners with the information about donation processes to the most prominent charities during crises. Priority will be given to the charities that are deemed to be most reliable and doing the most work.
+            
+            \item The different donation methods will be presented in an organized and consistent manner, regardless of the specific charity being donated to. Features like saving addresses and card information will also make this process smoother.
+            
+            \item Each member charity will have their own profile page, where all of their information can be found. The profiles will be divided into different parts, and will display in a consistent manner.
+            
+            \item Charities doing prominent work and with good reviews will be highlighted on the user's homepage.
+            
+            \item Users will be able to follow the profiles of the charities they are most invested in so that they receive regular notifications about their events.
+
+        \end{enumerate}
+
+
+\chapter{User Requirement Analysis}
+
+    In order to determine what features are required in the system, information was collected from potential users.
+    
+    \section{Methodology}
+    
+    Questionnaires were used to collect data about user requirements.\par
+    
+    The time available to collect data was very short, which is why questionnaires were preferred. They allowed the collection of a significant amount of data very quickly. Additionally, the risk of getting in contact with users physically during a pandemic was avoided. \par
+    
+    The representative users consisted of anyone interested in making donations to charities. This category of users was chosen since the main goal of the system is to provide a convenient donation process.
+    
+    \section{Raw Data}
+    
+    All users who were interviewed were positive that the suggested system would make the process of donating to charities easier for them. Nearly 50\% of users felt that the existence of the system would motivate them to donate more often.\par
+    
+    Over 80\% of users said the main forms of donation they took part in were monetary donations and clothing donations. Of this, over 90\% claimed to donate directly to people in their community instead of to a charitable organization.\par
+    
+    When asked about the problems they were facing with the current system of donations, nearly 80\% said that they were unable to even find a proper platform on which they could regularly make donations, while 96\% admitted that the process of verifying the reliability of the available charities was arduous. 98\% also cited difficulties gathering information about how to donate during national crises.\par
+    
+    Amongst less serious problems, 95\% of users mentioned an unfulfilled desire to stay up-to-date about charities they were interested in, while roughly 56\% expressed a desire to be notified about the outcomes of their donations, something that is not currently available.\par
+    
+    A handful of users mentioned other issues such as the difficulties of donating to more remote areas, and moral issues like the desire of certain donors to remain anonymous.
+    
+    \section{Current Situation}
+    
+    A few organizations, like JAAGO Foundation, have websites where donors can get the necessary information and donate money.\par
+    
+    However, the donation methods and the information available is very limited. They do not take non-monetary donations for one, and the organizations that do usually do so through social media. Methods to stay up-to-date usually include keeping track of things via social media, and updates about the outcomes of donations are entirely unavailable.\par
+    
+    There is no single platform where donors can find all the different kinds of charitable organizations.
+    
+    \section{Requirements}
+    
+    Base on the information collected, several requirements were identified.\par
+    
+    The system must include separate profile pages for each charity that decides to use it. Users will be suggested these profiles based on the specific category of donations they are looking for, e.g. selecting clothing donations will show the profiles of charities that provide services to collect and donate second-hand clothes.\par
+    
+    Each profile will have user reviews prominently displayed to ensure users know that the charities they are donating to are trusted by others as well. Reliability is clearly an important issue to users, and this feature should definitely help in this regard.\par
+    
+    During national crises, crucial information will be displayed on the homepage of the program to guide users towards the charities that are doing the most work. Users reported such information being of great importance to them, so providing it prominently should satisfy the users.\par
+    
+    Users who choose to donate to specific charities will be notified about what exactly was done with their donations. They will also be notified about upcoming events of charities they are interested in. A significant portion of the users expressed a desire to see such features, which is why they are being included.\par
+    
+    There were also a few less popular suggestions, such as exchange services or services for start-ups, but since these were more individual requests than representations of the desires of the average user, and also because such features are not compatible with the motives behind this system, it has been decided that these features will not make it onto the final product.
+    
+    \section{System Requirements Specifications Report}
+    
+        \subsection{Introduction}
+    
+            \subsubsection{Purpose}
+    
+                The purpose of this document is to detail the software requirements for a Donation Management System. It will describe details of the different features that will be implemented in the system and how users can interact with the system.\par
+    
+            \subsubsection{Intended Audience}
+    
+                This document is intended for both stakeholders and developers of the system, as well as any supervisors overlooking the development team.\par
+    
+            \subsubsection{Project Scope}
+    
+                The system will be available to potential donors to make the process of donating to the range of charities available in Bangladesh more comfortable for them while at the same time making the overall process of donating more effective. It will provide them with features to search for information about charities, stay up-to-date about their activities, make donations and receive updates about their donations.\par
+    
+                The system will also be available to charities and will work as a platform to expand their reach. They will be able to provide details about their activities to users, provide donation updates to donors and receive information about users interested in donating to them.
+    
+        \subsection{Overall Description}
+    
+            \subsubsection{Product Perspective}
+    
+                The system will act as a medium between potential donors and charities.\par
+    
+                Potential donors will be able to search for charities and even for different categories of donations upon which they will be shown a range of choices. On the page for a specific charity, they will be able to see a general overview of the charity, as well as the different activities currently underway. They will have the option to provide details to the charity for collection of non-monetary donations or provide monetary donations directly through their bank accounts.\par
+    
+                Charity organizations will be able to inform potential donors about the activities they are partaking in, collect information about donors who are willing to make non-monetary donations and inform past donors about the outcomes of their donations. The charities will have to contact support staff and verify that they are a legitimate non-profit organization, upon which they will be given an account on the system.
+    
+            \subsubsection{Product Functions}
+    
+                Donors will be able to
+    
+                \begin{itemize}
+                    \item Register for a profile
+                    \item Search for information regarding charities
+                    \item Stay up-to-date about their favorite charities
+                    \item Donate to their desired charities
+                    \item Receive updates about previous donations
+                    \item Leave reviews for charities they have donated to
+                \end{itemize}
+    
+                Charities will be able to
+    
+                \begin{itemize}
+                    \item Keep information about their organization and their activities on their homepage
+                    \item Highlight activities on the homepage of any donors interested in the organization
+                    \item Update past donors about the status of their donations
+                    \item Collect information about potential donations
+                \end{itemize}
+
+            \subsubsection{User Classes and Characteristics}
+    
+                The system divides its users into two categories, donors and charity organizations.\par
+    
+                Donors can be anyone looking to make donations or learn more about charities available in the country. The system will be designed to accommodate anyone with or without any technical competency. All the different features should be prominently displayed and easy to use. Individual users of this category may or may not use the system frequently.\par
+    
+                Charity organizations will have profiles within the system that donors will be able to view. It is expected that these profiles will be managed by appointed representatives of the charity organizations. They should have experience with managing the profile just as they would do for a social media platform. Extensive guidance regarding the management of charity profiles will not be provided by the system or by any support staff. They are also expected to frequently use the system so as to manage any requests for non-monetary donations by donors.
+    
+            \subsubsection{Operating Environment}
+    
+                The software will be able to operate on any computer running on the Windows operating system or any emulator running the Windows operating system.
+
+            \subsubsection{Design and Implementation Constraints}
+    
+                The development of the payment gateway for transactions for monetary donations is limited to the existing, secure gateways. A custom gateway will not be built for the system under any circumstances due to the security risks involved.\par
+    
+                With regards to time, the development team will only have until the first week of January, 2020 to develop the system. This might cause some features that are determined to be of lesser importance to be dropped.
+    
+            \subsubsection{Assumptions and Dependencies}
+    
+                The feature to notify users about the outcomes of donations is based on the assumption that charities will provide such updates regularly. If charities fail to provide such updates, this feature will not work as intended.\par
+    
+        \subsection{External Interface Requirements}
+    
+            \subsubsection{User Interfaces}
+    
+                When the system is started by the user, a registration and login page will be shown where they can register/login using a unique username and password. There will be a warning to make sure their username is memorable, since no account recovery process will be available for now. In the registration process, if the username is not unique, an error message will be shown informing the user about this. In the login process, if the login credentials are incorrect, an error message will be shown to inform the user.\par
+    
+                After the login process is complete, the interface is divided into two categories, one for donors and one for representatives of charity organizations.
+    
+                \paragraph{User Interface for Donors}\mbox{}\par
+    
+                Once logged in, the user will be taken to their homepage. There will be a navigation menu with options to go to different parts of the system. This navigation menu will be available everywhere on the program except for on the payment gateway when making monetary transactions.\par
+    
+                The homepage itself will consist of short descriptions of the activities of the highest rated charities in the system. There will also be a search bar at the top. Users will be able to use this search bar to search for different charities and categories of donations. A list of results will be shown when a search is made. Users can choose a result from this list, upon which they will be taken to the profile page of the relevant charity.\par
+    
+                The profile page of the charity will consist of details about the charity, their recent activities and an option to donate to the charity. Choosing to donate will give the user two options, either for a monetary donation or for a non-monetary donation.\par
+    
+                Choosing to make a monetary donation will take the user to a form which will display information about the charity and its bank account information. There will be a field where the user will enter the amount they want to donate. Upon confirming this amount, the user will be taken to a payment gateway. This gateway will not be designed by the development team due to security concerns. An existing, secure gateway will be used instead.\par
+    
+                Choosing to make a non-monetary donation will take the user to a form where they can provide information about what they want to donate as well as personal information such as their name, contact number or email. They must also provide a pickup point from where a representative of the charity will be expected to meet the donor to receive their donation. This can be at the office of the charity if the donor wishes to go there.\par
+    
+                After either type of donation is complete, the user will be shown a confirmation message.\par
+    
+                From the navigation menu, the user will be able to access their own profile. Here, they will simply be shown the option to change their password. No other information about the user will be stored by the system. There will also be a list of past donations made by the user on this page. They will have the option to leave reviews for charities they have donated to in the past in the form of a rating.
+    
+                \paragraph{User Interface for Charities}\mbox{}\par
+    
+                If a representative of the charity is logging in, they will see the profile page for their charity. If this is the first time they are logging in, then they must provide some basic information about the charity such as the name and description. They must also provide some contact information such as an email address.\par
+    
+                There will be an option to add new activities. The interface for this will be a form where different details about the activity can be added.
+    
+                \paragraph{General User Interface}\mbox{}\par
+    
+                A logout option will be available to both categories of users in the navigation menu.\par
+    
+                The interface will remain simple throughout, since the system is not meant for technically competent users. All instructions will be prominently displayed so that the system is usable by anyone with the least past experience with a computer. Any error messages shown to users will be informative and make it clear what needs to be fixed.
+
+            \subsubsection{Hardware Interfaces}
+            
+            The only end-user devices currently supported by the system are personal computers running the Windows operating system. An internet connection, either wired or wireless, is required. However, the system will not be network intensive.
+            
+            \subsubsection{Software Interfaces}
+            
+            There are two interactions that occur between the system and entities outside the system.\par
+            
+            
+            The first is with banks. When making monetary donations, donors must give transaction information. This information will be collected using a payment gateway. This payment gateway will not be developed by the development team due to security concerns. Instead, an existing, secure gateway will be used. The transaction information will be delivered to the relevant bank for verification by the gateway.\par
+            
+            The second is with an online cloud storage where the database will be stored. The entire database will be stored locally and be synchronized with the cloud storage. The synchronization process will take place when the system first starts up and also after any changes are made to any piece of data by the user. This includes changes to login information, changes to the details or activities of charities by representatives and any donations made by donors.
+            
+            \subsubsection{Communications Interfaces}
+            
+            The system will use an online cloud storage API to synchronize the local database.
+            
+        \subsection{System Features}
+        
+            \subsubsection{Making Donations}
+            
+            \paragraph{Description and Priority}\mbox{}\par
+                
+                Donors will be able to make monetary and non-monetary donations to any charity of their choice from the charity profile page. This is a High priority feature.
+            
+            \paragraph{Stimulus/Response Sequences}\mbox{}\par
+            
+                \begin{enumerate}[label=(\alph*)]
+                    \item The donor will register or login.
+                    \item The donor will search for a charity or for a donation category. The system will respond by providing a list of possible results.
+                    \item The donor will select a specific charity from the list of results. The system will respond by displaying the profile page of the charity.
+                    \item The donor will be able to select an option to make a monetary or a non-monetary donation on the charity profile page. They will also be able to specify if they wish to donate to a particular activity. The system will respond to a monetary donation request by taking the user to the payment gateway. The system will respond to a non-monetary donation request by taking the user to a form where they can provide information regarding the donation.
+                    \item For monetary donations, the payment gateway will handle the actual transaction process. An existing, secure gateway will be used for this purpose.
+                    \item For non-monetary donations, the donor will have to fill out the form provided to them. The system will then deliver the information provided by the user to the respective charity.
+                \end{enumerate}
+
+            \paragraph{Functional Requirements}\mbox{}\par
+        
+                REQ-1:	A database must be kept to verify the donor’s login information. Incorrect information will be met with an error message describing the problem.\par
+            
+                REQ-2:	A database must be maintained to store details about the different charities. Searches that do not match any results will be met with a message informing the user that there were no results.\par
+            
+                REQ-3:	A existing, secure payment gateway will be used to handle monetary donations. It must be ensured that the gateway handles incorrect transaction details properly. The details about this have not yet been decided.\par
+            
+                REQ-4:	The form used for non-monetary donations will highlight fields that are required and cannot be empty. Appropriate error messages will be shown if required information is left out.
+        
+            \subsubsection{Donation Updates}
+
+            \paragraph{Description and Priority}\mbox{}\par
+                
+                Charities will be able to provide updates about donations made by donors in the past. Donors will receive such updates in the form of a notification. Only donors that have specified which activity they are donating to will receive such a notification. Those who made general donations without specifying an activity will not. This feature has a Medium priority.
+            
+            \paragraph{Stimulus/Response Sequences}\mbox{}\par
+                
+                \begin{enumerate}[label=(\alph*)]
+                    \item A user logged in to a charity organization account will be able to update an existing activity.
+                    \item The system will search through the database for donations made to that particular activity.
+                    \item The system will send a notification to any users that have donated to that activity informing them about the update made to the activity.
+                \end{enumerate}
+            
+            \paragraph{Functional Requirements}\mbox{}\par
+                
+                REQ-1:	A database must be maintained to store the different activities of the charities.\par
+                
+                REQ-2:	A database must be maintained to store the details of the different donations, including details about which donors made the donations and which activities they donated to.
+
+            \subsubsection{Review Charities}
+
+            \paragraph{Description and Priority}\mbox{}\par
+            
+                Donors will be able to leave reviews for charities they have donated to. This is a Medium priority feature.
+            
+            \paragraph{Stimulus/Response Sequences}\mbox{}\par
+            
+                \begin{enumerate}[label=(\alph*)]
+                    \item A user logged in to a donor account will be able to access their profile page from the navigation menu. The profile page will contain a list of donations made by the donor. The system will retrieve the data for this list when the user accesses this page.
+                    \item Along with every donation entry, there will be an option to leave a rating for the charity. If the user provides a rating next to a donation entry, the system will recalculate the average rating for that charity and store it with the information regarding the charity in the database.
+                \end{enumerate}
+            
+            \paragraph{Functional Requirements}\mbox{}\par
+            
+                REQ-1:	A database must be maintained to store the details of the different charities, including their average rating calculated from the reviews left by all donors.
+
+        \subsection{Other Nonfunctional Requirements}
+
+        \subsubsection{Performance Requirements}
+
+            The only performance requirements relate to the database being used. The database must be synchronized every time there are changes to data being stored in the database, such as when a charity makes any changes to their profile or when a donor makes a donation, so as to ensure the most up-to-date version of the database is available in the online storage.
+            
+        \newpage
+        
+        \subsubsection{Security Requirements}
+        
+            The system will not store any personal information about donors. The only information that will be stored will be their login information and their donation history.\par
+            
+            The system will only store official contact information about charities and information about bank accounts to allow for monetary donations.\par
+            
+            Except for passwords, none of the other data raises concerns about privacy or security. Passwords must use at least a minimal level of encryption.\par
+
+            The database should be kept as lightweight as possible so as to reduce network bandwidth requirements on the user’s side.\par
+            
+            Regarding monetary donations, the system must use a secure payment gateway. An existing gateway will be used for this purpose due to the security risks involved. The system should not attempt to access any transaction information of donors. The entire transaction process is to be managed by the gateway.
+
+        \subsubsection{Software Quality Attributes}
+
+            The system must be designed in a simple manner that would be easy to understand from the perspective of users with the least technical competency.
+
+        \subsubsection{Business Rules}
+
+            Profiles for charity organizations cannot be setup through the registration process in the system. A representative from the charity will have to contact support staff in order to verify the legitimacy of the organization. Once this is done, they will be provided with login information for a blank profile for their charity.
+
+        \subsection{Appendix A: Glossary}
+        
+            \paragraph{Charity}\mbox{}\par
+                A charity, charity organization, or representative of a charity organization refers to a user that is logged into the system after have requested and received a public charity profile. These are users that will be able to edit information on the profile page for the charity they are registered as. They will not have access to the other parts of the system.
+            
+            \paragraph{Donor}
+                A donor is a user that has logged into the system after having register for a private profile. These are the users that will be able to view charity profiles and make donations to them.
+        
+        \subsection{Appendix B: Analysis Models}
+        
+            \begin{figure}[H]
+                \centering                \includegraphics[width=0.90\linewidth]{SRS/Diagram 0 (600PPI).png}
+                {\caption*{Data Flow Diagram - Diagram 0}}
+            \end{figure}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.65\linewidth]{SRS/ER Diagram - 800PPI.png}
+                {\caption*{Entity-Relationship Diagram}}
+            \end{figure}
+
+            \begin{figure}[H]
+                \centering                \includegraphics[width=0.75\linewidth]{SRS/Class Diagram (550 PPI).png}
+                {\caption*{Class Diagram}}
+            \end{figure}
+
+
+\chapter{Feasibility Analysis}
+
+    \section{Technical Feasibility}
+        \begin{itemize}
+            \item The program itself will not be using any special features that are not commonly available. As such, no additional software or hardware is required.
+            \item Google Firebase is used as the database.
+            \item Monetary transactions go through an existing transaction portal, SSLCommerz.
+        \end{itemize}
+    
+    \section{Economic Feasibility}
+        \begin{itemize}
+            \item There are no development costs associated with the project.
+            \item There may be nominal costs associated with server storage space once a large number of users begin to use the app. However, for now, the database being used is free of cost.
+            \item Maintenance costs should be minimal due to the nature of the program, and general maintenance tasks can most likely be handled by members of the development team. No dedicated full-time employees are needed to handle this task.
+        \end{itemize}
+    
+    \section{Operational Feasibility}
+        \begin{itemize}
+            \item The user interface will be intuitive and minimalist, which should make it easy to navigate even by non-technical people. Use of functionality that is common and likely to be familiar to users, such as a navigation tab and a prominently displayed search bar, will be stressed.
+        \end{itemize}
+
+
+\chapter{Project Timeline}
+
+    \section{Gantt Chart}
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.90\linewidth]{Project Scheduling/Gantt Chart - 1000PPI.png}
+            {\caption*{Gantt Chart}}
+        \end{figure}
+        
+        In the Gantt chart above, it can seen that the first few weeks were spent determining what the system should do and if the features are feasible. After this, there was a break due to mid term examinations. When work restarted, data flows, a project schedule and UML diagrams were created. Finally, prototyping and development could begin. The project ended with a testing and debugging phase.
+
+
+\chapter{Data Flow Diagrams}
+    
+    \section{Context Diagram}
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.75\linewidth]{Data Flow Diagrams/Context Diagram - 900PPI.png}
+            {\caption*{Context Diagram}}
+        \end{figure}
+        
+        In the Context Diagram above, it can be seen that there are three external entities, Donors, Charities and Banks.\par
+        
+        Donors initially interact with the system by making search queries, to which the system responds with search results. Donors are also informed about charity activities. When making a donation, donors provide transaction information for monetary donations, or donation details along with personal information for non-monetary donations. Once a donation is made, the donor receives a confirmation from the system. Later on, they may also receive donation updates. Finally, donors are able to provide reviews for charities they donate to.\par
+        
+        Charities interact with the system by providing details about their organization and recent activities as well as updates about previous donations they received. The system informs charities about the details of any non-monetary donation requests in the form of pickup information.\par
+        
+        Banks get involved during monetary donations. They receive payment requests from the system and must respond with receipt for successful transactions.
+    
+    \section{Diagram 0}
+    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.90\linewidth]{Data Flow Diagrams/Diagram 0 (600PPI).png}
+            {\caption*{Diagram 0}}
+        \end{figure}
+        
+        In Diagram 0 above, we can see the different major processes within the system.
+        
+        Donors provide personal information to allow Process 1, Make Donor Profile, to create their user profile and add their information to D1, the Donor Master data store.\par
+        
+        Donors provide search queries to Process 2, Find Charity, which retrieves information about charities from D2, the Charity Master data store, in order to send search results to donors.\par
+        
+        Once a donor has decided to make a donation, Process 3, Donate, gets involved. In the case of a monetary donation, the donor must provide transaction details. This prompts the process to make a payment request to the respective bank, which responds to the system with a receipt. For a non-monetary donation, the donor must provide donation information. The process uses this, along with donor information from D1, the Donor Master data store, to send pickup information to the respective charity. In either case, once a successful donation has been made, a confirmation is sent to the donor and the donation information is stored in D1, the Donor Master data store.\par
+        
+        When a charity creates an account on the system, they must provide details about their organization to Process 4, Make Charity Profile, which stores the information in D2, the Charity Master data store.\par
+        
+        Charities can provide information about their recent activities, which goes to Process 5, Show in User Homepage. This process stores the information in D3, the Activity Master data store. It also sends the information to donors on their homepages.\par
+        
+        When a charity provides an update about a past donation, this goes to Process 6, Notify user, which sends a notification to the respective donor.\par
+        
+        When a donor provides a review for a charity they have donated to, the review is handled by Process 7, Process Reviews. This process takes the reviews and stores them as a rating in D2, the Charity Master data store.
+    
+    \section{Diagram 2}
+    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.60\linewidth]{Data Flow Diagrams/Diagram 2 - 1000.png}
+            {\caption*{Diagram 2}}
+        \end{figure}
+        
+        In Diagram 2, we can see the details of how search queries by donors are processed. Process 2.1, Process Query, takes the search query and retrieves information about the charity from D2, the Charity Master data store, based on it. It then forwards this information to Process 2.2, Display Charity Profiles, which sends back the results in a visually pleasing manner to the user.
+        
+    \newpage
+    
+    \section{Diagram 3}
+    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.75\linewidth]{Data Flow Diagrams/Diagram 3 - 1000PPI.png}
+            {\caption*{Diagram 3}}
+        \end{figure}
+        
+        In Diagram 3, we can see the details of how donations are handled by the system.\par
+        
+        Process 3.1, Process Transaction, handles monetary donations. It takes the transaction information and sends a payment request to the respective bank. Receipts from the bank go to Process 3.2, Confirm Donation, which sends out a confirmation to the donor and stores information about the donation in D1, the Donor Master data store.\par
+        
+        Non-monetary donations are handled by Process 3.3, Process Non-Monetary Donation, which takes donation details from the donor and donor information for D1, the Donor Master data store, and uses it to send pickup information to the respective charity. It then stores the donation information in D1, the Donor Master data store.
+
+
+\chapter{UML Diagrams}
+
+    \section{Use Case Diagram}
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.75\linewidth]{UML Diagrams/Use Case Diagram (500 PPI).png}
+            {\caption*{Use Case Diagram}}
+        \end{figure}
+    
+    The use case diagram above describes the different features available in the system with donors as the primary actor.\par
+    
+    Donors are able to register and login to the system using the Register and Login use cases respectively. The registration process verifies that the user is unique using the included Verify Username use case and shows an error for any duplicates using the extended Duplicate Username Error use case. The login process verifies the login information using the included Verify Login Information use case and shows an error in case incorrect information is provided using the extended Display Login Error use case.\par
+    
+    Next, donors interact with their homepage via the View Homepage use case. Charity activities are shown to the user via the extended Retrieve Charity Activities use case, which has charities as secondary actors. On their homepage, donors can search for charities via the Search Charity use case, which also has charities as secondary actors.\par
+    
+    When making a donation, the Make Donation use case is used. This is a generalization of the Make Monetary Donation and Make Non-Monetary Donation uses cases. The prior has banks as secondary actors and has an included Verify Transaction Details use case and an included Verify Funds use case. The latter has charities as secondary actors and has an included Collect Donor Information use case.\par
+    
+    After making a donation, donors can rate charities via the Rate Charity use case, which has charities as secondary actors and has an included Process Rating use case.
+    
+    \section{Activity Diagram}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{UML Diagrams/Activity Diagram (600PPI).png}
+            {\caption*{Activity Diagram}}
+        \end{figure}
+        
+    In the activity diagram above, we can see the flow of activities undertaken by donors.\par
+    
+    When donors begin to use the system, their registration is checked. If they are registered, they are taken to the Login process and if they are not, they are taken to the Register process. Once either of these processes is complete, they are taken to the View Homepage process, which shows them their homepage.\par
+    
+    From their homepage, donors can go to the Search Charity or Category process, where they can search for a charity. Once they have selected a charity, they are taken to the View Charity Profile process. Here, they can choose to make a donation via the Donate process. If they choose to make a monetary donation, they are taken to the Provide Transaction Details process and then to the Make Transaction Process. If they choose to make a non-monetary donation, they are take to the Provide Information process.\par
+    
+    Alternatively, donors can choose to go to their personal profile from their homepage, which would use the View Personal Profile process. Here, they can use the Change Personal Information process or the View Donation History process. If they choose to view their donation history, they can further use the Review Charity process.\par
+    
+    At any time within the system, users can choose to go back to the View Homepage process or the View Personal Profile process. For simplicity, only two such instances are shown. At any time within the system, except for on the payment gateway while making a monetary donation, the user can choose to logout, upon which they will be taken to the Logout process. Several such instances are shown.
+    
+    \section{Sequence Diagram}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.90\linewidth]{UML Diagrams/Sequence Diagram (600PPI).png}
+            {\caption*{Sequence Diagram}}
+        \end{figure}
+    
+    The sequence diagram above shows the sequence of events that take place between different classes within the system as a donor logs into the system and makes a donation.\par
+    
+    The Donor Actor must first send Registration Information to the system, which goes to the Donor Class. The Donor Class responds with a Confirmation Message. Next, the Donor Actor must provide their Login Credentials, which again goes to the Donor Class. If the credentials are correct, the Donor Class responds with the donor's Homepage Information. Otherwise, an Error Message is returned.\par
+    
+    When a Donor Actor wants to search for a charity, they must provide a Search Query, which goes to the Charity Class. The Charity Class returns Search Results. Once the Donor Actor chooses a charity they want to see in more detail, they must send a Profile View Request, which again goes to the Charity Class. The Charity class responds with the Profile Information.\par
+    
+    When a Donor Actor wants to make a donation, they send a Donation Request to the Donation Class. If the donation is meant to be non-monetary, the Donation Class sends a Donation Information Request, to which the Donor Actor must respond with their Donation Information. If the donation is meant to be monetary, the Donation class sends a Transaction Information Request, to which the Donor Actor must respond with their Transaction Information. This information is used by the Donation class to send a Transaction Request to the Bank Actor, which responds with a Transaction Confirmation. Regardless of whether the donation was monetary or non-monetary, once the donation is complete, the Donation class responds with a Donation Request Confirmation to the Donor Actor.
+    
+    \section{Class Diagram}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.90\linewidth]{UML Diagrams/Class Diagram (550 PPI).png}
+            {\caption*{Class Diagram}}
+        \end{figure}
+    
+    The diagram above shows that the system has four class, Donor, Charity, Donation and Charity\_Activity.\par
+    
+    There are many-to-many relationships between the Donor and Charity classes as well as the Donor and Charity\_Activity classes. There are many-to-one relationships between the Donor and Donation classes, the Charity and Donation classes and the Charity and Charity\_Activity classes. Additionally, the Donation class is related to the Charity and Donor classes via composition and the Charity\_Activity class is also related to the Charity class via composition.
+    
+
+\chapter{Prototypes}
+
+    \section{Application Screenshots}
+        
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.45\linewidth]{Prototype Screenshots/1. Login Page.png}
+            {\caption*{Login Page}}
+        \end{figure}
+        
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.45\linewidth]{Prototype Screenshots/2. Home Page.png}
+            {\caption*{Home Page}}
+        \end{figure}
+        
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.45\linewidth]{Prototype Screenshots/3. Search Results.png}
+            {\caption*{Search Results}}
+        \end{figure}
+        
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.45\linewidth]{Prototype Screenshots/4. Charity Profile Page.png}
+            {\caption*{Charity Profile Page}}
+        \end{figure}
+        
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.45\linewidth]{Prototype Screenshots/5. Monetary Donation Page.png}
+            {\caption*{Monetary Donation Page}}
+        \end{figure}
+        
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.45\linewidth]{Prototype Screenshots/6. Payment Gateway (by SSLCommerz).png}
+            {\caption*{Payment Gateway (by SSLCommerz)}}
+        \end{figure}
+        
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.45\linewidth]{Prototype Screenshots/7. Non-Mnetary Donation Page.png}
+            {\caption*{Non-Monetary Donation Page}}
+        \end{figure}
+        
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.45\linewidth]{Prototype Screenshots/8. Donation History.png}
+            {\caption*{Donation History}}
+        \end{figure}
+        
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.45\linewidth]{Prototype Screenshots/9. Editing Charity Profile.png}
+            {\caption*{Editing Charity Profile}}
+        \end{figure}
+
+
+\chapter{Conclusion and Future Work}
+
+    \section{Conclusion}
+    
+        Our goal was to build a system that lets potential donors find different kinds of charities in one place and make the donation process convenient for them. As per the requirements of the users
+        and feasibility analysis, we built a donor profile and a charity profile for the convenience of both groups of users ends. Donors can search for charities based on categories and names among all the charities existing in our system. Donors can visit the charity  profiles and donate to those charities. For monetary donations, a payment gateway has been included for transactions and for non-monetary donations, donors can fill a form and let the charity know where they need the donation to be collected from. Charities on the other hand can add information to their profile as they want the donors to view them.
+
+    \section{Future Work}
+        \begin{enumerate}
+            \item Add a section for charity activities on charity profile pages. This feature would additionally allow donations to be collected for specific activities instead of to a charity in general.
+            \item Add a section to allow charities to view all the donations that have been made to their organization.
+            \item Add a feature to send updates about past donations to donors as notifications.
+            \item Add a system to delivery non-monetary donation information to charities via email.
+            \item Add a review system to allow donors to leave reviews for charities they have donated to.
+        \end{enumerate}
+
+
+\end{document}
