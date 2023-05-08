@@ -4,7 +4,7 @@ This program will accumulate information provided by different charity organizat
 
 ## Usage
 
-The application itself should be fairly intuitive to use. Users will be able to register for accounts through the application. However, the development team has decided to not allow charity organizations to register for accounts through the application to prevent abuse. Charity organization's are requested to contact donorschoosebd@gmail.com for further information.
+The application itself should be fairly intuitive to use. Users will be able to register for accounts through the application. However, the development team has decided to not allow charity organizations to register for accounts through the application to prevent abuse. Charity organization's are requested to contact the developers for further information.
 
 ## Screenshots
 
